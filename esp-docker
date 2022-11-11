@@ -1,0 +1,5 @@
+WORK_DIR=$(pwd)
+CONT_PATH=/home/default/build
+ESP_PATH="${ESP_PATH:=/dev/ttyUSB0}"
+
+docker run -w $CONT_PATH -v=$WORK_DIR:$CONT_PATH --device=$ESP_PATH -it esp-docker-runner $@
